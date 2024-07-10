@@ -1,0 +1,11 @@
+programa
+"Exemplo pequeno de geração de código."
+var
+binario x;
+numero y, z;
+{
+y : 5 - 3 + 4 * 2;
+z : (2 + y) / (9 % 5);
+x : (y ^ z ^ 2 >= 1000) e (y = 10);
+mostrar(x);
+}

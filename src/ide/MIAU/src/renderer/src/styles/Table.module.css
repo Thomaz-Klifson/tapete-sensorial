@@ -1,0 +1,144 @@
+/* Estilos base para todos os botões */
+p {
+  color: black;
+  font-size: 14px;
+}
+
+h4 {
+  margin-left: 24px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tableContainer {
+  background-color: white;
+  width: 1380px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid #EAECF0;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: 79px;
+  border-bottom: 1px solid #EAECF0;
+}
+
+.subbutton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  display: inline-block;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo para o botão de excluir */
+.delete {
+  background-color: white;
+  width: 104px;
+  height: 40px;
+  color: black;
+  font-size: 14px;
+  gap: 5px;
+}
+
+/* Estilo para o botão de adicionar */
+.add {
+  background-color: #AC34E8;
+  width: 124px;
+  height: 40px;
+  color: white;
+  font-size: 14px;
+}
+
+/* Estilos para quando o botão estiver com o mouse em cima */
+button:hover {
+  opacity: 0.8;
+}
+
+.tableBody {
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #EAECF0;
+}
+
+.input {
+  width: 200px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #EAECF0;
+  border-radius: 5px;
+}
+
+/* Estilos de Alto Contraste */
+.high-contrast p {
+  color: yellow !important;
+}
+
+.high-contrast h4 {
+  color: yellow !important;
+}
+
+.high-contrast .tableContainer {
+  background-color: black !important;
+  border: 1px solid yellow !important;
+}
+
+.high-contrast .tableHeader {
+  background-color: black !important;
+  border-bottom: 1px solid yellow !important;
+}
+
+.high-contrast .subbutton button {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+.high-contrast .delete {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+.high-contrast .add {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+.high-contrast button:hover {
+  opacity: 1 !important;
+}
+
+.high-contrast .tableBody {
+  background-color: black !important;
+}
+
+.high-contrast .formContainer {
+  background-color: black !important;
+  border-bottom: 1px solid yellow !important;
+}
+
+.high-contrast .input {
+  background-color: black !important;
+  color: yellow !important;
+  border: 1px solid yellow !important;
+}

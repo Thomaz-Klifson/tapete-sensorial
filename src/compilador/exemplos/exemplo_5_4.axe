@@ -1,0 +1,10 @@
+programa
+"Programa com imagem definida por URL"
+var
+numero x, obj;
+{
+x : 10;
+se (x > 10) {
+obj : criar_imagem("www.inteli.edu.br/logo.png", x, 5);
+}
+}

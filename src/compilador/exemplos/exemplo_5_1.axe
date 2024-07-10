@@ -1,0 +1,15 @@
+programa
+"Programa com declaração duplicada de variáveis"
+var
+numero x, y, z;
+texto a;
+binario y, n;
+{
+x : 10;
+y : criar_figura("quadrado", "#00FF00", 100, 50, 20);
+se (x = y) {
+tocar("musica.mp3");
+} senao {
+mostrar("Não faz nada");
+}
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIAU</title>
+    <p id="mensagem"></p>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #DEDCFF;
+            position: relative;
+        }
+        canvas {
+            z-index: 100;
+        }
+        #floor {
+            position: absolute;
+            bottom: 0;
+            width: 100vw;
+            height: auto;
+            z-index: 10;
+        }
+        #message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            font-weight: 600;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+        }
+        #back {
+            position: absolute;
+            top: 12px;
+            left: -150px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        #back img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button id="back">
+        <img src="back.png" alt="Back">
+    </button>
+    <canvas id="main" width="1200" height="650"></canvas>
+    <img id="floor" src="floor.png" alt="Floor Image">
+    <div id="message">Aperte uma tecla para jogar</div>
+    <script>
+        setTimeout(function() {
+            document.getElementById('message').style.display = 'none';
+        }, 3000);
+        document.getElementById('back').addEventListener('click', function() {
+            window.location.href = 'http://localhost:5173/ide';
+        });
+    </script>
+<script src="functions.js"></script>
+<script src="javascript.js"></script>
+</body>
+</html>

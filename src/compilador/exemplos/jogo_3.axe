@@ -1,0 +1,65 @@
+programa "jogo_2_miau"
+var 
+    numero circulo, circulo_vermelho, tecla, x_azul, x_vermelho, y_azul, y_vermelho;
+    binario colisao_detectada;
+{
+
+circulo_vermelho: criar_figura("circulo", "red", 900, 900, 20);
+circulo: criar_figura("circulo", "blue", 20, 20, 20);
+x_azul: 20;
+y_azul: 20;
+x_vermelho: 900;
+y_vermelho: 900;
+
+enquanto(v) {
+    tecla: consultar();
+        se (tecla = 1){
+            mover(circulo, 0, -10);
+            y_azul: y_azul - 10;
+            
+        }
+        se (tecla = 2){
+            mover(circulo, 0, 10);  
+            y_azul: y_azul + 10;        
+        }
+        se (tecla = 3){
+            mover(circulo, 10, 0);  
+            x_azul: x_azul + 10;        
+        }
+        se (tecla = 4){
+            mover(circulo, -10, 0);
+            x_azul: x_azul - 10;          
+        }
+
+        se (x_azul > x_vermelho){
+            mover(circulo_vermelho, 5, 0);
+            x_vermelho: x_vermelho + 5;
+        } senao {
+            mover(circulo_vermelho, -5, 0);
+            x_vermelho: x_vermelho - 5;
+        }
+
+        se (y_azul > y_vermelho){
+            mover(circulo_vermelho, 0, 5);
+            y_vermelho: y_vermelho + 5;
+        } senao {
+            mover(circulo_vermelho, 0, -5);
+            y_vermelho: y_vermelho - 5;
+        }
+
+        colisao_detectada: colidiu(circulo, circulo_vermelho);
+        se(colisao_detectada) {
+            mostrar("Você perdeu! Recarregue a aplicação para tentar novamente.");
+            limpar();
+            enquanto(v) {
+                mostrar("Você perdeu! Recarregue a aplicação para tentar novamente.");
+                esperar(100);
+
+            }
+        } senao {
+            mostrar("Fuja do circulo vermelho");
+        }
+
+        esperar(100);
+}
+}

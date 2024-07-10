@@ -1,0 +1,19 @@
+programa
+"Exemplo grande de geração de código."
+var
+numero x, obj;
+texto msg;
+{
+msg : "Programar em Fofi é muito fácil";
+x : (2^3^4) / 2;
+se (x*2 > 10-1) {
+obj : criar_imagem("leao.jpg", x*2, 2^5);
+} senao {
+obj : criar_imagem("cachorro.jpg", x+2*3, 100-1);
+x : 1;
+repita(3) {
+mover(obj, x, 99);
+x : x + 10;
+}
+}
+}

@@ -1,0 +1,18 @@
+programa
+"Exemplo de geração de código.
+Seu compilador deve \"gerar\" código JS equivalente.
+Considere criar variáveis temporárias na expressão x > 10 e no bloco repita()"
+var
+numero x, obj;
+texto msg;
+{
+msg : "Programar em Fofi é muito fácil";
+x : 10;
+se (x > 10) {
+obj : criar_imagem("leao.jpg", x, 5);
+} senao {
+repita(3) {
+mostrar(msg);
+}
+}
+}

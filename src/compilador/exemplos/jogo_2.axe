@@ -1,0 +1,34 @@
+programa "jogo_2_miau"
+var 
+    numero circulo, quadrado, tecla;
+    binario colisao_detectada;
+{
+
+quadrado: criar_figura("quadrado", "green", 500, 500, 50);
+circulo: criar_figura("circulo", "blue", 20, 20, 20);
+
+enquanto(v) {
+    tecla: consultar();
+        se (tecla = 1){
+            mover(circulo, 0, -10);
+            
+        }
+        se (tecla = 2){
+            mover(circulo, 0, 10);            
+        }
+        se (tecla = 3){
+            mover(circulo, 10, 0);          
+        }
+        se (tecla = 4){
+            mover(circulo, -10, 0);         
+        }
+        colisao_detectada: colidiu(circulo, quadrado);
+        se(colisao_detectada) {
+            mostrar("colisão detectada");
+        } senao {
+            mostrar("");
+        }
+
+        esperar(150);
+}
+}

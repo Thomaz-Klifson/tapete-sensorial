@@ -1,0 +1,38 @@
+programa "aplicacao_1"
+var
+    numero imagem_1, imagem_2, imagem_3, imagem_4;
+    numero tecla;
+{
+    imagem_1: criar_imagem("accordion.png", 0, 0);
+    imagem_2: criar_imagem("cello.png", 970, 0);
+    imagem_3: criar_imagem("violao.png", 0, 550);
+    imagem_4: criar_imagem("tambor.png", 970, 550);
+    enquanto (v)
+    {
+        tecla: ler();
+        se (tecla = 1){
+            reverter_destaque();
+            destacar(imagem_1);
+            tocar("acordeon.mp3");
+            
+        }
+        se (tecla = 2){
+            reverter_destaque();
+            destacar(imagem_2);
+            tocar("cello.mp3");            
+        }
+        se (tecla = 3){
+            reverter_destaque();
+            destacar(imagem_3);
+            tocar("violao.mp4");            
+        }
+        se (tecla = 4){
+            reverter_destaque();
+            destacar(imagem_4);
+            tocar("tambor.mp3");            
+        }
+
+        esperar(150);
+    } 
+}
+        

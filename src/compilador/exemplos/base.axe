@@ -1,0 +1,126 @@
+programa "000000"
+var
+    numero tecla;
+    texto cenario_1, cenario_2, cenario_3, cenario_4, cenario_5, cenario_6, cenario_7, cenario_8, cenario_9;
+    texto imagem_1, imagem_2, imagem_3, imagem_4, imagem_5, imagem_6, imagem_7, imagem_8, imagem_9;
+    texto audio_1, audio_2, audio_3, audio_4, audio_5, audio_6, audio_7, audio_8, audio_9;
+    texto verificador;
+    numero imagem;
+{
+    imagem: criar_imagem("branco.png", 2000, 2000); 
+    limpar();
+
+    # HIKARI AQUI
+    # exemplo: 
+    cenario_1: "cenario_floresta.jpg";
+    imagem_1: "imagem_dog.png";
+    audio_1: "audio_cachorro.mp3";
+
+    # TERMINA HIKARI AQUI
+    
+    enquanto (v)
+    {
+        tecla: ler();
+        se (tecla = 1){
+            se (cenario_1 != verificador) {
+                inicializar_com_imagem(cenario_1);
+            }
+            se (imagem_1 != verificador){
+                redefinir_imagem(imagem, imagem_1, 300,150);
+            }
+             se (audio_1 != verificador){
+                tocar(audio_1);
+            }
+        }
+        se (tecla = 2){
+            se (cenario_2 != verificador) {
+                inicializar_com_imagem(cenario_2);
+            }
+            se (imagem_2 != verificador){
+                redefinir_imagem(imagem, imagem_2, 300,150);
+            }
+            se (audio_2 != verificador){
+                tocar(audio_2);
+            }
+        }
+        se (tecla = 3){
+            se (cenario_3 != verificador) {
+                inicializar_com_imagem(cenario_3);
+            }
+            se (imagem_3 != verificador){
+                redefinir_imagem(imagem, imagem_3, 300,150);
+            }
+            se (audio_3 != verificador){
+                tocar(audio_3);
+            }
+        }
+        se (tecla = 4){
+            se (cenario_4 != verificador) {
+                inicializar_com_imagem(cenario_4);
+            }
+            se (imagem_4 != verificador){
+                redefinir_imagem(imagem, imagem_4, 300,150);
+            }
+            se (audio_4 != verificador){
+                tocar(audio_4);
+            }
+        }
+        se (tecla = 5){
+            se (cenario_5 != verificador) {
+                inicializar_com_imagem(cenario_5);
+            }
+            se (imagem_5 != verificador){
+                redefinir_imagem(imagem, imagem_5, 300,150);
+            }
+            se (audio_5 != verificador){
+                tocar(audio_5);
+            }
+        }
+        se (tecla = 6){
+            se (cenario_6 != verificador) {
+                inicializar_com_imagem(cenario_6);
+            }
+            se (imagem_6 != verificador){
+                redefinir_imagem(imagem, imagem_6, 300,150);
+            }
+            se (audio_6 != verificador){
+                tocar(audio_6);
+            }
+        }
+        se (tecla = 7){
+            se (cenario_7 != verificador) {
+                inicializar_com_imagem(cenario_7);
+            }
+            se (imagem_7 != verificador){
+                redefinir_imagem(imagem, imagem_7, 300,150);
+            }
+            se (audio_7 != verificador){
+                tocar(audio_7);
+            }
+        }
+        se (tecla = 8){
+            se (cenario_8 != verificador) {
+                inicializar_com_imagem(cenario_8);
+            }
+            se (imagem_8 != verificador){
+                redefinir_imagem(imagem, imagem_8, 300,150);
+            }
+            se (audio_8 != verificador){
+                tocar(audio_8);
+            }
+        }
+        se (tecla = 9){
+            se (cenario_9 != verificador) {
+                inicializar_com_imagem(cenario_9);
+            }
+            se (imagem_9 != verificador){
+                redefinir_imagem(imagem, imagem_9, 300,150);
+            }
+            se (audio_9 != verificador){
+                tocar(audio_9);
+            }
+        }
+        esperar(150);
+    } 
+}
+        

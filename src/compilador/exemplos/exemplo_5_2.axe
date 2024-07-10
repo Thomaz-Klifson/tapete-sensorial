@@ -1,0 +1,9 @@
+programa
+"Programa com variável não declarada"
+var
+numero x;
+texto a;
+{
+x : 10;
+y : criar_figura("quadrado", "#00FF00", 100, 50, 20);
+}

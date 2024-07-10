@@ -1,0 +1,10 @@
+programa
+"Programa com variável numero que recebe texto"
+var
+numero x, z;
+binario y;
+{
+y : (11 > 10);
+x : "ola mundo";
+z : 5 % 2;
+}

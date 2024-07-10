@@ -1,0 +1,37 @@
+
+
+.containerP {
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+  width: 1380px;
+  height: 7px
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 1380px;
+    border-bottom: 1px solid #EAECF0;
+    background-color: white;
+  }
+  
+  .container p {
+    margin-left: 10px;
+  }
+  
+  /* Style the checkbox */
+  input[type="checkbox"] {
+    margin-left: 10px;
+    appearance: none;
+    border:solid purple;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+  }
+
+input[type="checkbox"]:checked {
+    background-color: purple;
+    border-radius: 4px;
+    /* accent-color: purple; */
+}
