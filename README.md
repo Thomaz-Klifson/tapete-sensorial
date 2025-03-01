@@ -63,39 +63,6 @@ O desenvolvimento foi acompanhado da redação de um artigo científico, embasan
     ```
 
 
-# Timeline do desenvolvimento
-
-### Sprint 1
-
-- Entendimento do usuário.
-- Entendimento do negócio.
-- Definição da arquitetura do sistema.
-
-### Sprint 2
-
-- Primeira versão da IDE.
-- Analisador Léxico.
-- Início da redação do artigo.
-
-### Sprint 3
-
-- Analisador Sintático.
-- Segunda versão da IDE.
-- Seção de trabalhos relacionados do artigo.
-
-### Sprint 4
-
-- Analisador Semântico e Gerador de Código.
-- Terceira versão da IDE.
-- Seção de materiais e métodos do artigo.
-
-### Sprint 5
-
-- Revisão do compilador.
-- Organização do Github.
-- Versão final da IDE.
-- Conclusão e resultados do artigo.
-
 # Licença
 
 A licença do projeto é <a src="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1">Attribution 4.0 International</a>
