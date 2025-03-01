@@ -10,16 +10,6 @@
 
 # **Projeto:** Tapete sensorial como recurso lúdico para assistência a crianças com Transtorno do Espectro Autista.
 
-## **Grupo:** MIAU
-
-## **Integrantes:**
-
-<a>[Enya Oliveira](https://www.linkedin.com/in/enya-oliveira-636566240/)</a><br>
-<a>[Esther Hikari](https://www.linkedin.com/in/estherhikari/)</a><br>
-<a>[Giuliano Bontempo Domiciano](https://www.linkedin.com/in/giuliano-bontempo/)</a><br>
-<a>[Henrique Burle](https://www.linkedin.com/in/henrique-burle/)</a><br>
-<a>[Mariana Brasil Görresen](https://www.linkedin.com/in/mariana-gorresen/)</a><br>
-
 
 # Introdução
 
