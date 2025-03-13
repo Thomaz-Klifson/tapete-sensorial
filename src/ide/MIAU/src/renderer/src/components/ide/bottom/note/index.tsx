@@ -157,34 +157,30 @@ var
         esperar(150);
     } 
 }`
-const handlePlay = async () => {
-  try {
-    setErrorMessage(''); // Clear previous error message
-    const res = await fetch('http://127.0.0.1:5000/compilador', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ codigo: code })
-    });
-    const data = await res.json();
-    setResponse(JSON.stringify(data, null, 2));
-    
-    if (data.status === 'error') {
-      setErrorMessage(data.message);
-    } else {
 
-      await window.api.saveJavaScript(data.javascript);
+  const handlePlay = async () => {
+    try {
+      setErrorMessage('');
+      const res = await fetch('http://127.0.0.1:5000/compilador', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ codigo: code })
+      });
+      const data = await res.json();
+      setResponse(JSON.stringify(data, null, 2));
 
-      navigate('/game');
+      if (data.status === 'error') {
+        setErrorMessage(data.message);
+      } else {
+        await window.api.saveJavaScript(data.javascript);
+        navigate('/game');
+      }
+    } catch (error) {
+      setErrorMessage(`Erro: ${JSON.stringify(error, null, 2)}`);
     }
-  } catch (error) {
-    setErrorMessage(`Erro: ${JSON.stringify(error, null, 2)}`);
-  }
-};
-
-
-
+  };
 
   const handleEditCode = () => {
     setEditableCode(code);
@@ -193,7 +189,7 @@ const handlePlay = async () => {
 
   const handleSendCode = async () => {
     try {
-      setErrorMessage(''); 
+      setErrorMessage('');
       const res = await fetch('http://127.0.0.1:5000/compilador', {
         method: 'POST',
         headers: {
@@ -208,9 +204,7 @@ const handlePlay = async () => {
         setErrorMessage(data.message);
       } else {
         setShowModal(false);
-        // Save the JavaScript code to a file
         await window.api.saveJavaScript(data.javascript);
-        // Navigate to /game
         navigate('/game');
       }
     } catch (error) {
@@ -219,26 +213,19 @@ const handlePlay = async () => {
   };
 
   return (
-    <div className="flex flex-col w-[]  items-center justify-center relative">
-      <div
-        className="flex flex-col h-[20rem] w-[40rem] items-center justify-center rounded-3xl border-linha border-2 bg-white dark:border-gray-600 relative"
-      >
-        <div className="overflow-y-scroll h-full w-full p-4">
-          <pre className="whitespace-pre-wrap text-left text-sm text-gray-700 dark:text-gray-300">{code}</pre>
+    <div className="flex flex-col items-center justify-center relative">
+      {errorMessage && (
+        <div className="bg-red-500 text-white p-2 rounded-md mb-4">
+          {errorMessage}
         </div>
-        <div className='absolute bottom-0 right-0 m-4 flex space-x-2'>
-          {errorMessage && (
-            <div className="bg-red-500 text-white p-2 rounded-md">
-              {errorMessage}
-            </div>
-          )}
-          <Button onClick={handleEditCode} className='w-[7.8rem] hover:bg-linha text-verde flex justify-center items-center rounded-lg h-9 bg-linha'>
-            Editar Código
-          </Button>
-          <Button onClick={handlePlay} className='w-9 hover:bg-linha flex justify-center items-center rounded-full h-9 bg-linha'>
-            <FaPlay className=' text-verde' />
-          </Button>
-        </div>
+      )}
+      <div className='absolute bottom-0 right-0 m-4 flex space-x-2'>
+        {/* <Button onClick={handleEditCode} className='w-[7.8rem] hover:bg-linha text-verde flex justify-center items-center rounded-lg h-9 bg-linha'>
+          Editar Código
+        </Button> */}
+        <Button onClick={handlePlay} className='w-9 hover:bg-linha flex justify-center items-center rounded-full h-9 bg-linha'>
+          <FaPlay className='text-verde' />
+        </Button>
       </div>
 
       <Modal show={showModal} onClose={() => setShowModal(false)}>
@@ -251,7 +238,7 @@ const handlePlay = async () => {
           />
         </Modal.Body>
         <Modal.Footer className="flex justify-end space-x-2">
-        {errorMessage && (
+          {errorMessage && (
             <div className="bg-red-500 text-white p-2 rounded-md">
               {errorMessage}
             </div>

@@ -38,35 +38,28 @@ async function main() {
 	// Início do código
 	imagem = criar_imagem("branco.png", 2000, 2000)
 	limpar()
-	cenario_1 = "cenario_1.jpg"
-	cenario_1 = "cenario_1.jpg"
+	cenario_1 = "cenario_2.png"
 	cenario_2 = ""
 	cenario_3 = ""
 	cenario_4 = ""
-	cenario_5 = "cenario_1.jpg"
+	cenario_5 = ""
 	cenario_6 = ""
 	cenario_7 = ""
 	cenario_8 = ""
 	cenario_9 = ""
-	imagem_1 = "imagem_1.jpg"
+	imagem_1 = ""
 	imagem_2 = ""
 	imagem_3 = ""
 	imagem_4 = ""
-	imagem_5 = ""
+	imagem_5 = "imagem_maxresdefault.jpg"
 	imagem_6 = ""
-	imagem_1 = "imagem_1.jpg"
-	imagem_2 = "imagem_1.jpg"
-	imagem_3 = "imagem_1.jpg"
-	imagem_4 = "imagem_1.jpg"
-	imagem_5 = "imagem_1.jpg"
-	imagem_6 = "imagem_1.jpg"
 	imagem_7 = ""
 	imagem_8 = ""
 	imagem_9 = ""
 	audio_1 = ""
 	audio_2 = ""
 	audio_3 = ""
-	audio_4 = ""
+	audio_4 = "audio_Pula Pipoquinha   Bob Zoom   Video Infantil Musical Oficial.mp3"
 	audio_5 = ""
 	audio_6 = ""
 	audio_7 = ""
@@ -83,7 +76,6 @@ async function main() {
 			
 			let _TEMP3 = imagem_1 != verificador
 			if (_TEMP3) {
-				redefinir_imagem(imagem, imagem_1, 400, 150)
 				redefinir_imagem(imagem, imagem_1, 300, 150)
 			}
 			

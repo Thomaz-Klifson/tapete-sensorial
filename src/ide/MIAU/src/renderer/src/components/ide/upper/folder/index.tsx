@@ -24,10 +24,10 @@ import MiniSidebar from "../sidebar"
 
 export function Folder() {
   return (
-    <div className="flex w-[34.5%] ml-[5rem] border-linha border-2 rounded-3xl  h-full bg-white items-center justify-start">
-        <div className="h-full w-screen">
-        <MiniSidebar/>
-        </div>
+    <div className="flex w-[34.5%] ml-20 border-linha border-2 rounded-3xl h-full bg-white items-center justify-start">
+      <div className="h-full w-full">
+        <MiniSidebar />
+      </div>
     </div>
   )
 }

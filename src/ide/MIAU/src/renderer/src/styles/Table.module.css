@@ -12,11 +12,13 @@ h4 {
 
 .tableContainer {
   background-color: white;
-  width: 1380px;
+  width: auto;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   border: 1px solid #EAECF0;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .tableHeader {
